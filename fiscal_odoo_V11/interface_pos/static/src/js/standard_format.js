@@ -359,7 +359,7 @@ standard_format = (function () {
 
         var vitem = {} //validated itme
         vitem.type = '1';
-        vitem.quantity = Math.abs(item.quantity).toFixed(3);
+        vitem.quantity = iconfig.printer_type != "star" ? Math.abs(item.quantity).toFixed(3): Math.abs(item.quantity).toFixed(2);
         vitem.description = item.product.display_name;
         vitem.price = item.price.toFixed(2);
         vitem.tax = typeTax(taxes_by_id[item.product.taxes_id[0]]) //el producto solamente viene con el id del impuesto,
