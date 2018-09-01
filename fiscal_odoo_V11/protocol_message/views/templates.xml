@@ -1,0 +1,8 @@
+ <odoo>
+       <template  id="protocol_mesg_assets_backend" inherit_id="web.assets_common">
+            <xpath expr="." position="inside">
+            <script type="text/javascript" src="/protocol_message/static/src/js/protocol.js"></script>
+            </xpath>
+        </template> 
+
+</odoo>

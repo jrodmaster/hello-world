@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+
+    <record id="Inherit_config_interface_ip_tree" model="ir.ui.view">
+      <field name="name">Inherit Config Interface List</field>
+      <field name="model">config.interface</field>
+      <field name="inherit_id" ref="config_interface.config_interface_tree_view" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+          <field name="mode_restaurant"/>
+          <field name="printer_type"/>
+        </xpath>
+      </field>
+    </record>
+
+
+    <record id="inherit_pos_config_interface_pos" model="ir.ui.view">
+      <field name="name">pos.config.form.view</field>
+      <field name="model">pos.config</field>
+      <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+      <field name="view_type">form</field>
+      <field name="arch" type="xml">
+          <!-- <group string="Configuracion de Interfaz">
+            <field name="config_interface_id"/>
+          </group> -->
+          <xpath expr="//h2[8]" position ="before">
+                <h2>Interfaz</h2>
+            
+
+            <div class="col-xs-12 col-md-6 o_setting_box" id="config_interface_id">
+            
+              <div class="o_setting_right_pane">
+                <label for="config_interface_id"/>
+                <div class="text-muted" id="config_interface_id">
+                                  Configuracion de Interfaz
+                                </div>
+                <div class="content-group mt16">
+                  <div class="row mt16">
+                    <label string="Interfaz" for="config_interface_id" colspan="4" nolabel="1" class="col-md-3 o_light_label"/>
+                    <field name="config_interface_id"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </xpath>
+        </field>
+      </record>
+
+    </data>
+
+  </odoo>

@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <!-- view list config interface -->
+        <record model="ir.ui.view" id="config_interface_tree_view">
+            <field name="name">config_interface list</field>
+            <field name="model">config.interface</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- action window config interface -->
+        <record model="ir.actions.act_window" id="config_interface.action_window">
+            <field name="name">Configuration Interface</field>
+            <field name="res_model">config.interface</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- menu categories -->
+
+        <menuitem name="Interfaz" id="config_interface.menu_1" parent="base.menu_administration"/>
+
+
+        <!-- actions -->
+
+        <menuitem name="Configuracion" id="config_interface.menu_1_list" parent="config_interface.menu_1" action="config_interface.action_window"/>
+
+
+
+    </data>
+</odoo>

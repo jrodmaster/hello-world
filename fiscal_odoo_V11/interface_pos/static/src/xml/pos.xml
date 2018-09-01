@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+    <t t-name="InterfaceBillButton" id ="interface_bill">
+        <span class="control-button interface-order-printbill">
+            <i class="fa fa-file-text"></i>             Precuenta                                                                        
+        </span>
+    </t>
+    <t t-name="PrinterFiscalOption" id ="fiscal_option">
+        <span class="control-button interface_menu_fiscal">
+            <i class="fa fa-print"></i>              Impresora                                                                    
+        </span>
+    </t>
+
+
+
+</template>
